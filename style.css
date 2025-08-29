@@ -1,0 +1,97 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  min-height: 100vh;
+  display: flex; justify-content: center; align-items: center;
+  padding: 20px;
+}
+
+.app {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%; max-width: 550px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.top-bar {
+  display: flex; gap: 10px; margin-bottom: 15px;
+}
+
+.top-bar input, .top-bar select {
+  padding: 10px; border-radius: 10px; border: none; outline: none;
+}
+
+.top-bar input { flex: 1; }
+.top-bar button {
+  padding: 10px 20px;
+  border: none; border-radius: 10px;
+  background: #00c6ff; color: #fff;
+  font-weight: bold; cursor: pointer;
+  transition: .3s;
+}
+.top-bar button:hover { background: #009ed8; }
+
+.search-bar { margin-bottom: 15px; }
+.search-bar input {
+  width: 100%; padding: 10px;
+  border-radius: 10px; border: none; outline: none;
+}
+
+ul {
+  list-style: none; max-height: 360px; overflow-y: auto;
+}
+ul::-webkit-scrollbar { width: 6px; }
+ul::-webkit-scrollbar-thumb { background: #aaa; border-radius: 10px; }
+
+li {
+  background: rgba(255,255,255,0.8);
+  margin-bottom: 10px; padding: 12px;
+  border-radius: 12px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: .3s;
+}
+li.completed { opacity: 0.6; text-decoration: line-through; }
+
+.task-info { flex: 1; }
+.task-meta { font-size: 12px; color: #555; }
+
+.priority-high { color: #e63946; font-weight: bold; }
+.priority-medium { color: #f4a261; font-weight: bold; }
+.priority-low { color: #2a9d8f; font-weight: bold; }
+
+.actions button {
+  border: none; background: none;
+  cursor: pointer; font-size: 16px; margin-left: 8px;
+  transition: .2s;
+}
+.actions button:hover { transform: scale(1.2); }
+
+.filters {
+  display: flex; flex-wrap: wrap;
+  gap: 5px; margin-top: 15px;
+}
+.filters button {
+  flex: 1; padding: 8px;
+  border: none; border-radius: 10px;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer; transition: .3s;
+}
+.filters button.active {
+  background: #00c6ff; color: #fff; font-weight: bold;
+}
+
+@media(max-width:600px) {
+  .top-bar { flex-wrap: wrap; }
+}
