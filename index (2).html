@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Advanced To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>📌 Ultra To-Do</h1>
+    <div class="top-bar">
+      <input type="text" id="taskInput" placeholder="New task...">
+      <input type="date" id="dueDate">
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search tasks...">
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="completed">Completed</button>
+      <button data-filter="high">High Priority</button>
+      <button data-filter="today">Due Today</button>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
